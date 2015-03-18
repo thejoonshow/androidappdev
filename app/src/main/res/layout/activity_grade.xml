@@ -9,8 +9,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText3"
-        android:layout_weight="0.94"
+        android:id="@+id/gpaTitle"
+        android:layout_weight="0.30"
         android:textSize="50dp"
         android:gravity="center"
         android:text="My GPA"
@@ -18,10 +18,12 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="381dp"
-        android:id="@+id/editText4"
+        android:layout_height="wrap_content"
+        android:id="@+id/gpa"
         android:text="3.96"
         android:gravity="center"
         android:textSize="50dp"
-        android:background="#ffffffff" />
+        android:background="#ffffffff"
+        android:layout_weight="0.65" />
+
 </LinearLayout>

@@ -9,25 +9,29 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class MainActivity extends ActionBarActivity {
-    private String[] login = new String[2];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         final Button button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 EditText username = (EditText)findViewById(R.id.editText);
-                login[0] = username.getText().toString();
                 EditText password = (EditText)findViewById(R.id.editText2);
-                login[1] = password.getText().toString();
+
                 Intent i = new Intent(MainActivity.this, GradeActivity.class);
-                i.putExtra(Intent.EXTRA_USER, login);
+
+                i.putExtra("username", username.getText().toString());
+                i.putExtra("password", password.getText().toString());
                 startActivity(i);
             }
         });
