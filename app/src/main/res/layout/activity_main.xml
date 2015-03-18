@@ -23,7 +23,8 @@
         android:id="@+id/button"
         android:layout_alignParentBottom="true"
         android:layout_alignEnd="@+id/editText2"
-        android:layout_alignStart="@+id/editText2" />
+        android:layout_alignStart="@+id/editText2"
+        android:onClick="signIn"/>
 
     <EditText
         android:layout_width="wrap_content"

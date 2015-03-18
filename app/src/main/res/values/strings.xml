@@ -8,4 +8,7 @@
     <string name="password">Enter password</string>
     <string name="enter">Enter</string>
     <string name="logout">Logout</string>
+    <string name="title_activity_my">MyActivity</string>
+    <string name="title_activity_grade">GradeActivity</string>
+
 </resources>

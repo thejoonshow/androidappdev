@@ -15,26 +15,13 @@ import java.util.List;
 
 public class MainActivity extends ActionBarActivity {
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-        final Button button = (Button) findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                EditText username = (EditText)findViewById(R.id.editText);
-                EditText password = (EditText)findViewById(R.id.editText2);
-
-                Intent i = new Intent(MainActivity.this, GradeActivity.class);
-
-                i.putExtra("username", username.getText().toString());
-                i.putExtra("password", password.getText().toString());
-                startActivity(i);
-            }
-        });
     }
 
 
@@ -58,5 +45,16 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void signIn(View view){
+        EditText username = (EditText)findViewById(R.id.editText);
+        EditText password = (EditText)findViewById(R.id.editText2);
+
+        Intent i = new Intent(this, GradeActivity.class);
+
+        i.putExtra("username", username.getText().toString());
+        i.putExtra("password", password.getText().toString());
+        startActivity(i);
     }
 }
