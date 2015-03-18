@@ -23,9 +23,14 @@ public class GradeActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grade);
         Intent i = getIntent();
+        try{
+            mUsername = i.getStringExtra("username");
+            mPassword = i.getStringExtra("password");
+        }
+        catch (Exception e){
+            
+        }
 
-        mUsername = i.getStringExtra("username");
-        mPassword = i.getStringExtra("password");
     }
 
     public void myClickHandler(View view) {
